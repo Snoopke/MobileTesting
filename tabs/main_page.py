@@ -1,3 +1,6 @@
+from appium.webdriver.common.touch_action import TouchAction
+from unidecode import unidecode
+
 from selenium.common.exceptions import NoSuchElementException
 from .locators import MainPageLocators
 
@@ -65,15 +68,42 @@ class MainWindow:
         button = self.driver.find_element_by_id(*MainPageLocators.PLUS)
         button.click()
 
-    def check_result(self):
-        return self.driver.find_element_by_id(*MainPageLocators.RESULTS).text
+    def press_minus(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.MINUS)
+        button.click()
 
-    def check_formula(self):
-        return self.driver.find_element_by_id(*MainPageLocators.FORMULA).text
+    def press_times(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.TIMES)
+        button.click()
 
-    def clear_screen(self):
+    def press_divide(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.DIVIDE)
+        button.click()
+
+    def press_coma(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.COMA)
+        button.click()
+
+    def press_delete(self):
         button = self.driver.find_element_by_id(*MainPageLocators.DELETE)
         button.click()
+
+    def check_result(self):
+        return unidecode(self.driver.find_element_by_id(*MainPageLocators.RESULTS).text)
+
+    def check_formula(self):
+        return unidecode(self.driver.find_element_by_id(*MainPageLocators.FORMULA).text)
+
+    def delete_last_digit(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.DELETE)
+        button.click()
+
+    def clear_the_screen(self):
+        button = self.driver.find_element_by_id(*MainPageLocators.DELETE)
+        action = TouchAction(self.driver)
+        action.long_press(button, duration=1000)
+        action.perform()
+
 
 
 

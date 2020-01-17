@@ -17,5 +17,5 @@ class MainPageLocators:
     PLUS = 'com.dalviksoft.calculator:id/op_add',
     RESULTS = 'com.dalviksoft.calculator:id/result',
     FORMULA = 'com.dalviksoft.calculator:id/formula',
-
+    COMA = 'com.dalviksoft.calculator:id/dec_point',
 
