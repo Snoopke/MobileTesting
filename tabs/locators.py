@@ -1,4 +1,4 @@
-class MainWindowLocators:
+class MainPageLocators:
     ONE = 'com.dalviksoft.calculator:id/digit_1',
     TWO = 'com.dalviksoft.calculator:id/digit_2',
     THREE = 'com.dalviksoft.calculator:id/digit_3',
@@ -15,5 +15,7 @@ class MainWindowLocators:
     TIMES = 'com.dalviksoft.calculator:id/op_mul',
     MINUS = 'com.dalviksoft.calculator:id/op_sub',
     PLUS = 'com.dalviksoft.calculator:id/op_add',
+    RESULTS = 'com.dalviksoft.calculator:id/result',
+    FORMULA = 'com.dalviksoft.calculator:id/formula',
 
 
