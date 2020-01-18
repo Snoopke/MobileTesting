@@ -3,10 +3,10 @@
 # Getting started
 1) You have to update DESIRED_CAPS in conftest.py 
 ##### Run Appium 
-$ appium 
+`$ appium` 
 ##### Connect android phone to pc or run any Emulator 
 ##### Run command 
-$ adb devices 
+`$ adb devices` 
 ##### Get your Android device name And put it to script DESIRED_CAPS['deviceName'] 
 ##### Check and change DESIRED_CAPS['platformVersion']
 
@@ -16,7 +16,7 @@ $ adb devices
 
 # Running the test
 
-pytest -v test_main_window.py
+`pytest -v test_main_window.py`
 
 
 
