@@ -9,7 +9,6 @@ DESIRED_CAPS = {
     'automationName': 'UiAutomator2',
     'appPackage': 'com.dalviksoft.calculator',
     'appActivity': 'com.android2.calculator3.Calculator',
-    'app': r'C:\Users\michail\PycharmProjects\MobileTesting\app\base.apk'
 }
 
 
