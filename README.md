@@ -1,7 +1,7 @@
 # Sample calculator automation using Appium
 
 # Getting started
-1) You have to update DESIRED_CAPS in conftest.py 
+1) You have to update DESIRED_CAPS in conftest.py
 Run Appium
 $ appium
 Connect android phone to pc or run any Emulator
