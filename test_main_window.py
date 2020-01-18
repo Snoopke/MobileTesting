@@ -124,4 +124,3 @@ def test_leading_zeros_test(driver):
     step.press_digit_zero()
     result = step.check_formula()
     assert result == '0', 'Expected {}. Actual result {}'.format('0', result)
-
