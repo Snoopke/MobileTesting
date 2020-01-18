@@ -10,7 +10,6 @@ class MainWindow:
         self.driver = driver
 
     def is_element_present(self, what):
-        """Checks if element is presented on the screen"""
         try:
             self.driver.find_element_by_id(what)
         except NoSuchElementException:
