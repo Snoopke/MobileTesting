@@ -18,4 +18,3 @@ class MainPageLocators:
     RESULTS = 'com.dalviksoft.calculator:id/result',
     FORMULA = 'com.dalviksoft.calculator:id/formula',
     COMA = 'com.dalviksoft.calculator:id/dec_point',
-
