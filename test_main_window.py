@@ -1,5 +1,6 @@
-from .tabs.main_page import MainWindow
 import pytest
+
+from .tabs.main_page import MainWindow
 
 
 @pytest.mark.skip
@@ -71,7 +72,6 @@ def test_subtraction(driver):
     step.press_minus()
     step.press_digit_eight()
     step.press_digit_nine()
-    step.press_equals()
     result = step.check_result()
     assert result == '-19', 'Expected {}. Actual result {}'.format('-19', result)
 
@@ -83,9 +83,8 @@ def test_multiplication(driver):
     step.press_digit_six()
     step.press_times()
     step.press_digit_two()
-    step.press_equals()
     result = step.check_result()
-    assert result == '52', 'Expected {}. Actual result {}'.format('-19', result)
+    assert result == '52', 'Expected {}. Actual result {}'.format('52', result)
 
 
 def test_division(driver):
@@ -95,7 +94,6 @@ def test_division(driver):
     step.press_digit_two()
     step.press_divide()
     step.press_digit_four()
-    step.press_equals()
     result = step.check_result()
     assert result == '15,5', 'Expected {}. Actual result {}'.format('15,5', result)
 
@@ -118,7 +116,7 @@ def test_combination(driver):
     assert result == '3', 'Expected {}. Actual result {}'.format('3', result)
 
 
-def test_leading_zero_test(driver):
+def test_leading_zeros_test(driver):
     """Try input 000"""
     step = MainWindow(driver)
     step.press_digit_zero()
@@ -126,3 +124,4 @@ def test_leading_zero_test(driver):
     step.press_digit_zero()
     result = step.check_formula()
     assert result == '0', 'Expected {}. Actual result {}'.format('0', result)
+

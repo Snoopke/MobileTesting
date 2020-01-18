@@ -1,7 +1,7 @@
 from appium.webdriver.common.touch_action import TouchAction
 from unidecode import unidecode
-
 from selenium.common.exceptions import NoSuchElementException
+
 from .locators import MainPageLocators
 
 
@@ -102,10 +102,3 @@ class MainWindow:
         action = TouchAction(self.driver)
         action.long_press(button, duration=1000)
         action.perform()
-
-
-
-
-
-
-
